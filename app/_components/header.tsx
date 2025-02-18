@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <Card>
             <CardContent className="px-5 py-5 justify-between items-center flex flex-row">
-                <Image src="/Logo.png" alt={"FSW Barber"} height={22} width={120} />
+                <Image src="/Logo_barber.svg" alt={"Gigio's Barber"} height={22} width={120} />
                 <Button variant="outline" size="icon">
                     <MenuIcon size={22}/>
                 </Button>
