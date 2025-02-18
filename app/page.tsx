@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { format } from "date-fns"
 import { Header } from "./_components/header"
 import { ptBR } from "date-fns/locale"
@@ -7,7 +7,6 @@ import { BookingItem } from "./_components/ui/booking-item"
 import { db } from "./_lib/prisma"
 import { BarbershopItem } from "./(home)/_components/barbershop_item"
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home() {
   const barbershop = await db.barbershop.findMany({})
   return (
