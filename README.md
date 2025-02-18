@@ -17,7 +17,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - **Next.js**: Framework para React que possibilita a criação de aplicações web dinâmicas e rápidas! 🚀
 - **Prisma**: ORM para facilitar a interação com o banco de dados, proporcionando uma experiência de desenvolvimento mais fluida! 💻
-- **NeonDS**: Uma solução moderna para bancos de dados, garantindo alta performance e escalabilidade! 🌌
+- **NeonDB**: Uma solução moderna para bancos de dados, garantindo alta performance e escalabilidade! 🌌
 - **Tailwind CSS**: Para estilização rápida e responsiva, permitindo um design atraente e funcional! 🎨
 - **Shadcn**: Para componentes UI estilizados, oferecendo uma interface amigável e moderna! ⚙️
 - **TypeScript**: Para garantir tipagem forte e segurança no código, reduzindo erros durante o desenvolvimento! 🔒
