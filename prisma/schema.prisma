@@ -21,16 +21,31 @@ model User {
 }
 
 model Barbershop {
-  id          String    @id @default(uuid())
+  id          String     @id @default(uuid())
   name        String
   address     String
   description String
-  created_at  DateTime  @default(now())
-  updated_at  DateTime  @updatedAt
+  rating      Decimal    @default(5.0) @db.Decimal(2, 1)
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
   phones      String[]
   imageUrl    String
-  bookings    Booking[]
   services    Service[]
+  barbers     Barber[]
+}
+
+model Barber {
+  id           String     @id @default(uuid())
+  name         String
+  barbershopId String
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  imageUrl     String
+  description  String?
+  specialty    String     @default("Cortes e Barbas")
+  workingHours String     @default("Seg-Sex: 9h-18h")
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @updatedAt
+  bookings     Booking[]
 }
 
 model Service {
@@ -50,11 +65,11 @@ model Booking {
   userId     String
   serviceId  String
   service    Service  @relation(fields: [serviceId], references: [id])
+  barberId   String?
+  barber     Barber?  @relation(fields: [barberId], references: [id])
   date       DateTime
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
-
-  Barbershop Barbershop[]
 }
 
 model Account {
