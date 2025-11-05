@@ -14,6 +14,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV DATABASE_URL="postgresql://postgres:postgres@localhost:5432/barbearia"
+ENV DOCKER_BUILD=true
 RUN npx prisma generate
 RUN npm run build
 
