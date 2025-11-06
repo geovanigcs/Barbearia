@@ -5,7 +5,7 @@ declare global {
 }
 
 let prisma: PrismaClient
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
     prisma = new PrismaClient()
 } else {
     if (!global.cachedPrisma) {
@@ -15,5 +15,3 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const db = prisma
-
-// Será feito com que ao invés de ser feito varias ligações com o banco, fica limitado há apenas uma, quando o reload for executado!
