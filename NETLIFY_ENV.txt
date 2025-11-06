@@ -1,0 +1,29 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONFIGURAR NA NETLIFY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Acesse: https://app.netlify.com
+2. Seu site → Site settings → Environment variables
+3. Adicione estas 3 variáveis:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DATABASE_URL
+postgresql://neondb_owner:ubL1C9ExzgRZ@ep-shrill-cherry-a5s3a7rt-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXTAUTH_SECRET
+1v1N5GMODSnCbbxP5Q/v7aluEyh5PIP5RE50d4yF11g=
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXTAUTH_URL
+https://[seu-site].netlify.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANTE:
+- Marque "Same value for all deploy contexts"
+- Clique em "Save"
+- Depois vá em Deploys → Trigger deploy → Clear cache and deploy
